@@ -8,7 +8,7 @@
         <script>
 
         // """ Rock Paper Scissors"""
-        
+        var output = document.getElementById("output")
         var player = prompt("Do you choose Rock, Paper, Scissors?")
         var ps = player.charAt(0).toUpperCase();
         var win = false;
@@ -21,10 +21,41 @@
         } else {
             computer = "Scissors";
         }
+
         var cs = computer.charAt(0).toUpperCase();
         console.log(computer)
+        var html = '';
 
-        // if(ps == "R")
+        if (cs == ps){
+            html += "it's a tie!";
+        } 
+        else {
+            if (ps == "R") {
+            player = "Rock";
+            if (cs == "S") {win = true;
+            }   
+        } 
+        else if (ps == "P") {
+            player = "Paper";
+            if (cs == "R") {win = true;
+            }
+        } 
+        else {
+            player = "Scissors";
+            if (cs == "P") {win = true;
+            }
+        }
+    
+        if(win) {
+            html += "You win!";
+        }
+        else {
+            html += "You lose!";
+        }
+    }
+
+        output.innerHTML = "Player vs Computer <br>" + player + " vs " + computer +
+        " <br> Result is: " + html;
 
 // """ Magic 8 ball game """
             // var html = "something went wrong"
