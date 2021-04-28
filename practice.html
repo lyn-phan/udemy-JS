@@ -3,7 +3,134 @@
         <title> </title>
         </head>
     <body>
+        <div id="output"> </div>
+
         <script>
+
+        // """ Rock Paper Scissors"""
+        
+        var player = prompt("Do you choose Rock, Paper, Scissors?")
+        var ps = player.charAt(0).toUpperCase();
+        var win = false;
+        var computer = Math.random();
+
+        if (computer < 0.34) {
+            computer = "Rock";
+        } else if (computer < 0.67){
+            computer = "Paper";
+        } else {
+            computer = "Scissors";
+        }
+        var cs = computer.charAt(0).toUpperCase();
+        console.log(computer)
+
+        // if(ps == "R")
+
+// """ Magic 8 ball game """
+            // var html = "something went wrong"
+            // var output = document.getElementById("output");
+
+            // var question = prompt("Ask me a question.")
+            // var randomNumber = Math.floor(Math.random()*6);
+
+            // switch(randomNumber) {
+            //     case 0:
+            //         answer = "You're going to be very rich.";
+            //         break;
+            //     case 1:
+            //         answer = "Yes, you'll have grey hair.";
+            //         break;
+            //     case 2:
+            //         answer = "Of course!";
+            //         break;
+            //     case 3:
+            //         answer = "Most likely";
+            //         break;
+            //     case 4:
+            //         answer = "I don't think so.";
+            //         break;
+            //     case 5:
+            //         answer = "Absolutely";
+            //         break;
+            //     case 6:
+            //         answer = "never ever";
+            //         break;
+            // }
+            // output.innerHTML = "You asked me " + question + "." + "Your answer is " + answer;
+
+
+// """ Heads or tails game """
+            // var html = "something went wrong"
+            // var output = document.getElementById("output");
+            // var question = prompt("heads or tails?");
+            // var result = question == "heads" ? 1 : 0;
+            // var randomNumber = Math.floor(Math.random()*2);
+            // if (result == randomNumber) {
+            //     html = "you're right!";
+            // } else {
+            //     html = "wrong!"
+            // }
+            // output.innerHTML = html;
+
+            // var myTime = prompt("What are you doing?");
+            // var output = document.getElementById("output");
+            // var html;
+
+            // switch(myTime) {
+            //     case "eating breakfast":
+            //         html = "It must be before noon.";
+            //         break;
+            //     case "eating lunch":
+            //         html = "It must be 12 o'clock.";
+            //         break;
+            //     case "eating dinner":
+            //         html = "it must be after 5pm";
+            //         break
+            //     default:
+            //         html = "who knows what time it is?";
+            // }
+
+            // output.innerHTML = html;
+
+            // var myTime = 21;
+            // var output = document.getElementById("output");
+
+            // if(myTime < 12) {
+            //     output.innerHTML = "Good morning, sunshine!";
+            // } else if (myTime >= 12 && myTime < 13) {
+            //     output.innerHTML = "It's time for lunch!";
+            // } else if(myTime >= 17 && myTime < 20) {
+            //     output.innerHTML = "Make a good dinner!";
+            // } else {
+            //     output.innerHTML = "Relax or go to bed early.";
+            // }
+
+
+
+            // var userName = ["Joe", "Applez", "Guacamole"];
+            // var userInput = prompt("What is your username? ");
+            // // var checkUser = userName.indexOf(userInput) > -1 ? true : false;
+            // var output = document.getElementById("output");
+            // // output.innerHTML = userName.indexOf(userInput) > -1 ? "welcome" : "denied";
+            // // output.innerHTML += ", " + userInput;
+
+            // if(userName.indexOf(userInput) > -1) {
+            //     output.innerHTML = "Welcome, " + userInput;
+            // } else {
+            //     output.innerHTML = "Goodbye, IDK you."
+            // }
+
+        // var userName = prompt("What's your name?");
+        // var output = document.getElementById("output");
+        // output.innerText = "Welcome to my page, " + userName;
+
+
+            // var output = document.getElementById("output")
+            // output.innerHTML = "Welcome to my page!"
+            // output.innerText = "Welcome to the best page!"
+            // console.dir(document)
+
+
             // let animals = ["giraffe", "elephant", "chimpanzee", "armadillo", "red panda"];
             // let randomIndex = Math.floor(Math.random()*animals.length);
             // let randAnimal = animals[randomIndex];
@@ -34,6 +161,23 @@
             // var aboutMe ={name: "Lynda", faveColor: "pink", age: 34}
             // var message = prompt("What do you want to know about me?")
             // console.log(aboutMe[message])
+
+            // var Lynda = {
+            //     age: 34,
+            //     hair: "brown",
+            //     eyes: "brown",
+            //     work: "student",
+            // };
+
+            // var friends = {
+            //     friend1: Lynda,
+            //     friend2: {
+            //         age: 34,
+            //         hair: "black"
+            //     }
+            // }
+
+            // var friends1 = [Lynda,{age:30, hair: "black"}];
             
 
         </script>
