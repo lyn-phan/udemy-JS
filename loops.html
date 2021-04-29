@@ -1,20 +1,102 @@
 <html>
     <head>
         <title> </title>
+        <style>
+            td {border: 1px solid black;}
+
+        </style>
         </head>
     <body>
         <div id="output"> </div>
 
         <script>
-            var output = document.getElementById("output");
-            var bananaCal = 89;
-            var calTracker = 0;
-            var question = prompt("How many bananas did you eat?");
 
-            for(bananaCal; bananaCal>0; bananaCal++){
-                calTracker = bananaCal * question
-                output.innerHTML = "Your total calories eaten is: " + calTracker;
-            }
+// if item = null, break out of loop and ask if they want to add anything
+        var output = document.getElementById("output");
+        var addItem;
+        var shoppingList = [];
+        var howManyTimes = prompt("How many items would you like to add to the list?")
+        
+        for (var x=0; x<howManyTimes; x++) {
+            addItem = prompt("What do you want to add? ");
+            if(addItem == "no"){break;}
+            shoppingList.push(addItem);
+        }
+
+        for(myItem of shoppingList) {
+            output.innerHTML += myItem + "<br>";
+        }
+  
+
+
+
+
+  
+
+
+
+        // var output = document.getElementById("output");
+        
+        // for(var x in document) {
+        //     output.innerHTML += x + "= " + document[x] + "<br>";
+        // }
+
+
+    // Reverse an array
+    // var output = document.getElementById("output");
+    // var userNames = ["Puka", "Naddy", "Nana", "ZZ"];
+
+    // for(var x = userNames.length -1; x >= 0; x--) {
+    //     output.innerHTML += userNames[x] + "<br>";
+    // }
+
+        // Challeng is to find multiple of 5s and return total
+            // loop to 1000
+            // get all numbers multiples of 5 and add them together
+            // out put all the numbers
+            // output total after loop completes
+            // var output = document.getElementById("output");
+            // var total = 0;
+            // var html = " ";
+
+            // for (var x = 0; x < 1000; x++) {
+            //     if(x % 5 === 0) {
+            //     total = total + x;
+            //     output.innerHTML += "value of x " + x + " " + "subTotal = " + total + "<br>";
+            //     }
+            // }
+   
+            // output.innerHTML += "Total " + total;
+
+        // Building a table within a loop
+            // var output = document.getElementById("output");
+            // var html = "<table>";
+
+            // for(var row = 0; row < 10; row++) {
+            //     html += "<tr>";
+            //         for (var col = 0; col < 5; col++) {
+            //             html += "<td> Cell = " + ((col+1) + (row*5)) + "</td>";
+            //         }
+            //         html += "</tr>";
+            // }
+
+            // html += "</table>";
+            // output.innerHTML = html;
+
+
+
+            // var output = document.getElementById("output");
+            // var bananaCal = 89;
+            // var total = 0;
+            // var question = prompt("How many bananas did you eat?");
+            // var holder = '';
+
+            // for(var x = 1; x <= question; x++){
+            //     total += bananaCal
+            //     holder = x > 1 ? "bananas" : "banana"
+            //     output.innerHTML += "You ate " + x + " " + holder + ". " + "Your total calories is now " + total + "<br>";
+            // }
+            // output.innerHTML += "Your total calorie count is " + total;
 
             // var output = document.getElementById("output");
 
@@ -24,6 +106,7 @@
             //     }
             // }
 
+         // Using a loop to guess a password  
             // var secret = 'javascript';
             // var guess = prompt("Try to guess the secret password: ")
 
