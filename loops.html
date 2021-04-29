@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title> </title>
+        </head>
+    <body>
+        <div id="output"> </div>
+
+        <script>
+            var output = document.getElementById("output");
+            var bananaCal = 89;
+            var calTracker = 0;
+            var question = prompt("How many bananas did you eat?");
+
+            for(bananaCal; bananaCal>0; bananaCal++){
+                calTracker = bananaCal * question
+                output.innerHTML = "Your total calories eaten is: " + calTracker;
+            }
+
+            // var output = document.getElementById("output");
+
+            // for(var x = 0; x <= 31; x++) {
+            //     if (x % 2 !== 0) {
+            //         output.innerHTML += "value of x is: " + x + "<br>";
+            //     }
+            // }
+
+            // var secret = 'javascript';
+            // var guess = prompt("Try to guess the secret password: ")
+
+            // while (guess != secret) {
+            //     guess = prompt("Wrong, guess again!")
+            // };
+            // output.innerHTML = "You got it!"
+    
+</script>
+    </body>
+
+
+</html>
