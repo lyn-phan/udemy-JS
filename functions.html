@@ -1,0 +1,276 @@
+<html>
+    <head>
+        <title> </title>
+
+        </head>
+    <body>
+        <!-- Code:
+        <input type="text" id="code1">
+        <input type="text" id="code2">
+        <input type="text" id="code3">
+        <br>
+        <input type="button" onClick="crack()" value="Try Code">
+        <br> -->
+        <input type="text" id="item">
+        <br>
+        <input type="button" onClick="addItem()" value="Add Item">
+        <br>
+        <div id="output"></div>
+
+<!-- <div id="output"></div>  -->
+<!-- <input type="button" onClick="start()" value = "start game"> -->
+
+<script>
+    var shoppingList = [];
+
+    function addItem(){
+        var additem = document.getElementById("item").value;
+        console.log(additem)
+        shoppingList.push(additem);
+
+        function showItem(){
+        var html = "";
+        var output = document.getElementById("output");
+
+        for(var x = 0; x < shoppingList.length; x++) {
+            html += (x+1) + ". " + shoppingList[x] + "<br>";
+        }  
+        output.innerHTML = html;  
+    }
+    showItem();    
+    }
+
+
+
+
+    // one function to add items to array
+    // another to output array to console
+    // as many local var as possible
+
+
+
+        // var output = document.getElementById("output");
+        // var a = 1000;
+
+        // function outsideFun(){
+        //     var b = 2000;
+
+        //     function insideFun(){
+        //         b++;
+        //         return b;
+        //     }
+        //     insideFun();
+        //     var c = insideFun();
+        //     var d = function() {
+        //         b++;
+        //         return b;
+        //     }
+        //     d();
+        //     var e = d();
+        //     console.log(b);
+        // }
+        // outsideFun();
+        // outsideFun();
+
+    // var output = document.getElementById("output");
+    // var myArray = ["apple", "cherry", "berry", "pineapple", "cherry", "strawberry", "apple", "cherry", "mandarins"];
+    // var myArrayClean = removeDupe(myArray);
+    // output.innerHTML = myArray + "<br>" + myArrayClean;
+
+    // function removeDupe(arr) {
+    //     var cArray = [];
+    //     var cObject = {};
+    //     var z = "";
+    //     for(var x=0; x<arr.length; x++){;
+    //         cObject[arr[x]] = "whatever"; // put the list in a dictionary, don't worry about the value
+    //     }
+    //     for(z in cObject){
+    //         console.log(z)
+    //         // cArray.push(z);
+    //     }
+    //     return cArray;
+    // }
+
+    // var outsideFun = "outside";
+
+    // function myFun(){
+    //     var insideFun = "inside";
+    //     console.log(outsideFun)
+    //     console.log(insideFun)
+    // }
+    // myFun();
+    // console.log(outsideFun)
+
+
+//   recursive game w/ shuffle function
+// var secretWord = ["JavaScript", "Python", "Java", "C", "Bubbles"];
+// var output = document.getElementById("output");
+
+// function start(){
+//     shuffleArray(secretWord);
+//     output.innerHTML += secretWord + "<br>";
+// }
+
+// function shuffleArray(arr){
+//     for(var x = arr.length-1; x>0; x--){
+//         var holder = Math.floor(Math.random()*(x+1));
+//         var temp = arr[x];
+//         arr[x] = arr[holder];
+//         arr[holder] = temp;
+//     }
+//     return arr
+// }
+
+// function start() {
+//     mysteryNum = Math.floor(Math.random()*secretWord.length);
+//     getSecret(prompt("guess the word"));
+// }
+// function getSecret(secret) {
+//     if(secret == secretWord[mysteryNum]){
+//         output.innerHTML = "You are correct!";
+//     } else{
+//         getSecret(prompt("Guess again!"));
+//     }
+// }
+
+
+
+    // var a = "Lynda";
+    // var output = document.getElementById("output");
+
+    // (function(){
+    //     var a = "my name is...";
+    //     output.innerHTML = a;
+    // })();
+
+    // output.innerHTML += a;
+
+
+// anonymous functions//
+    // var output = document.getElementById("output");
+    // var a = function(b){
+    //     output.innerHTML = "welcome to the funk" + " " + b;
+    // }
+
+// Code cracking game
+// var cCode = [];
+// var count = 0;
+// var output = document.getElementById("output");
+// var c1 = document.getElementById("code1");
+// var c2 = document.getElementById("code2");
+// var c3 = document.getElementById("code3");
+
+// for(var x = 0; x < 3; x++){
+//     cCode.push(Math.floor(Math.random()*9));
+// }
+// // output.innerHTML = cCode;
+
+// function crack(){
+//     count = 0; 
+//     var guess = [c1.value, c2.value, c3.value];
+//     for(var x=0; x<cCode.length; x++) {
+//         output.innerHTML += checkNum(guess[x], cCode[x]);
+//     }
+//     if(count == 3) {
+//         output.innerHTML += "You guessed it! <br>";
+//     } else {
+//         output.innerHTML += "<br>";
+//     }
+// }
+
+// function checkNum(a, b) {
+//     if(a > b){return "L";}
+//     if(a < b) {return "H";}
+//     if(a==b) {
+//         count++;
+//         return a;}
+// }
+
+
+
+
+
+
+// default parameters or no arg parameters //     
+//     var output = document.getElementById("output");
+
+//     var a = myNewFunc("sup");
+
+//     function myNewFunc(para = "Hello World") {
+//         output.innerHTML += para;
+//         return para;
+//     }
+
+
+// <!-- 
+//      Basic Calculator   -->
+//         <!-- First: <input type="text" id="num1">
+//         Second: <input type="text" id="num2">
+
+//         <input type="button" onClick="addBy()" value="Add">
+//         <input type="button" onClick="subtractBy()" value="Subtract">
+//         <input type="button" onClick="multiplyBy()" value="Multiply">
+//         <input type="button" onClick="divideBy()" value="Divide">
+//         <br><div id="output"></div>
+
+//             var output = document.getElementById("output");
+//             var num1 = document.getElementById("num1");
+//             var num2 = document.getElementById("num2");
+
+//             function addBy() {
+//                 var a = num1.value + "+" + num2.value;
+//                 var b = Number(num1.value) + Number(num2.value);
+//                 outHTML(a, b);
+//             }
+
+//             function subtractBy(){
+//                 var a = num1.value + "-" + num2.value;
+//                 var b = Number(num1.value) - Number(num2.value);
+//                 outHTML(a, b);
+
+//             }
+
+//             function multiplyBy(){
+//                 var a = num1.value + "*" + num2.value;
+//                 var b = Number(num1.value) * Number(num2.value);
+//                 outHTML(a, b);
+
+//             }
+
+//             function divideBy(){
+//                 var a = num1.value + "/" + num2.value;
+//                 var b = Number(num1.value) / Number(num2.value);
+//                 outHTML(a, b);
+
+//             }
+
+//             function outHTML(a, b) {
+//                 output.innerHTML += a + "=" + b + "<br>";
+//             } -->
+
+
+// //  Nickname Generator   // 
+//         //     var adj = ["Super", "Amazing", "Wonderful", "Smelly", "Curious"]
+//         //     var output = document.getElementById("output");
+
+//         //     function myFun() {
+        //         var question = prompt("what's your name?")
+        //         var randomAdj = Math.floor(Math.random() * adj.length);
+        //         output.innerHTML += question + " the " + adj[randomAdj] + "<br>";
+        //     }
+
+
+            // var a = "hello"
+
+            // function myFunction() {
+            //     var b = a + " " + "world";
+            //     return b
+
+            // }
+
+    
+</script>
+</body>
+
+
+</html>
